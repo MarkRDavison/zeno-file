@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="markdavison.common.server" Version="9.0.3" />
+    <PackageReference Include="markdavison.common.source.generators" Version="9.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="7.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="7.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\shared\mark.davison.file.shared.commands\mark.davison.file.shared.commands.csproj" />
+    <ProjectReference Include="..\..\shared\mark.davison.file.shared.queries\mark.davison.file.shared.queries.csproj" />
+    <ProjectReference Include="..\mark.davison.file.api.persistence\mark.davison.file.api.persistence.csproj" />
+    <ProjectReference Include="..\migrations\mark.davison.file.api.migrations.postgres\mark.davison.file.api.migrations.postgres.csproj" />
+    <ProjectReference Include="..\migrations\mark.davison.file.api.migrations.sqlite\mark.davison.file.api.migrations.sqlite.csproj" />
+  </ItemGroup>
+
+</Project>

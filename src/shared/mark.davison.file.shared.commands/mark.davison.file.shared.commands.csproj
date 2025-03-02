@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="markdavison.common.server" Version="9.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\api\mark.davison.file.api.persistence\mark.davison.file.api.persistence.csproj" />
+    <ProjectReference Include="..\mark.davison.file.shared.constants\mark.davison.file.shared.constants.csproj" />
+    <ProjectReference Include="..\mark.davison.file.shared.validation\mark.davison.file.shared.validation.csproj" />
+  </ItemGroup>
+
+</Project>
