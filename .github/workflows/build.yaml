@@ -60,23 +60,6 @@ jobs:
           context: ./src
           push: false
 
-  build-image-bff-web:
-    runs-on: ubuntu-latest
-
-    permissions:
-      contents: read
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Build and push Docker image
-        uses: docker/build-push-action@f2a1d5e99d037542a71f64918e516c093c6f3fc4
-        with:
-          file: ./Docker/bff-web.dockerfile
-          context: ./src
-          push: false
-
   build-image-web:
     runs-on: ubuntu-latest
 

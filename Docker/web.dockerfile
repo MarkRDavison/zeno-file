@@ -5,14 +5,14 @@ ENV CI_BUILD=true
 
 COPY / /app/
 
-RUN rm web/mark.davison.novella.web.ui/wwwroot/css/*.css -f
-RUN rm web/mark.davison.novella.web.ui/wwwroot/css/*.min.css -f
+RUN rm web/mark.davison.file.web.ui/wwwroot/css/*.css -f
+RUN rm web/mark.davison.file.web.ui/wwwroot/css/*.min.css -f
 
 RUN dotnet tool install Excubo.WebCompiler --global
-RUN /root/.dotnet/tools/webcompiler web/mark.davison.novella.web.ui/wwwroot/css -r -m -o web/mark.davison.novella.web.ui/wwwroot/css -z disable
+RUN /root/.dotnet/tools/webcompiler web/mark.davison.file.web.ui/wwwroot/css -r -m -o web/mark.davison.file.web.ui/wwwroot/css -z disable
 
-RUN dotnet restore web/mark.davison.novella.web.ui/mark.davison.novella.web.ui.csproj
-RUN dotnet publish -c Release -o /app/publish/ web/mark.davison.novella.web.ui/mark.davison.novella.web.ui.csproj
+RUN dotnet restore web/mark.davison.file.web.ui/mark.davison.file.web.ui.csproj
+RUN dotnet publish -c Release -o /app/publish/ web/mark.davison.file.web.ui/mark.davison.file.web.ui.csproj
 
 FROM nginx:alpine AS FINAL
 WORKDIR /usr/share/nginx/html
